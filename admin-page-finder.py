@@ -133,7 +133,8 @@ try:
 'adm/index.brf','adm.brf','affiliate.brf','adm_auth.brf','memberadmin.brf','administratorlogin.brf']
     
     try:
-        site = raw_input("Write Target WebSite For Scan: ")
+        #site = raw_input("Write Target WebSite For Scan: ")
+	site = sys.argv[1]
         site = site.replace("http://","")
         print ("\tChecking website " + site + "...")
         conn = httplib.HTTPConnection(site)
@@ -166,7 +167,7 @@ try:
             if response.status == 200:
                 var1 = var1 + 1
                 print "%s %s" % ( "\n\n>>>" + host, "Admin page found!")
-                raw_input("Press enter to continue scanning.\n")
+                #raw_input("Press enter to continue scanning.\n")
             elif response.status == 404:
                 var2 = var2
             elif response.status == 302:
@@ -177,7 +178,7 @@ try:
         print("\n\nCompleted ! \n")
         print var1, " Admin Page Found !"
         print var2, " Total Page Scanned !"
-        raw_input("[/] The Game Over; Press Enter to Exit")
+        #raw_input("[/] The Game Over; Press Enter to Exit")
 
 
     if code==2:
@@ -194,7 +195,7 @@ try:
             if response.status == 200:
                 var1 = var1 + 1
                 print "%s %s" % ( "\n\n>>>" + host, "Admin page found!")
-                raw_input("Press enter to continue scanning...\n")
+                #raw_input("Press enter to continue scanning...\n")
             elif response.status == 404:
                 var2 = var2
             elif response.status == 302:
@@ -205,7 +206,7 @@ try:
         print("\n\nCompleted \n")
         print var1, " Admin Page Found !"
         print var2, " Total Page Scanned !"
-        raw_input("The Game Over; Press Enter to Exit")
+        #raw_input("The Game Over; Press Enter to Exit")
 
     if code==3:
         print("\t [+] Scanning " + site + "...\n\n")
@@ -221,7 +222,7 @@ try:
             if response.status == 200:
                 var1 = var1 + 1
                 print "%s %s" % ( "\n\n>>>" + host, "Admin page found!")
-                raw_input("Press enter to continue scanning.\n")
+                #raw_input("Press enter to continue scanning.\n")
             elif response.status == 404:
                 var2 = var2
             elif response.status == 302:
@@ -232,7 +233,7 @@ try:
         print("\n\nCompleted \n")
         print var1, " Admin Page Found !"
         print var2, " Total Page Scanned !"
-        raw_input("The Game Over; Press Enter to Exit")
+        #raw_input("The Game Over; Press Enter to Exit")
 
     if code==4:
         print("\t [+] Scanning " + site + "...\n\n")
@@ -248,7 +249,7 @@ try:
             if response.status == 200:
                 var1 = var1 + 1
                 print "%s %s" % ( "\n\n>>>" + host, "Admin page found!")
-                raw_input("Press enter to continue scanning.\n")
+                #raw_input("Press enter to continue scanning.\n")
             elif response.status == 404:
                 var2 = var2
             elif response.status == 302:
@@ -259,7 +260,7 @@ try:
         print("\n\nCompleted \n")
         print var1, " Admin Page Found !"
         print var2, " Total Page Scanned !"
-        raw_input("The Game Over; Press Enter to Exit")
+        #raw_input("The Game Over; Press Enter to Exit")
 
     if code==5:
         print("\t [+] Scanning " + site + "...\n\n")
@@ -275,7 +276,7 @@ try:
             if response.status == 200:
                 var1 = var1 + 1
                 print "%s %s" % ( "\n\n>>>" + host, "Admin page found!")
-                raw_input("Press enter to continue scanning.\n")
+                #raw_input("Press enter to continue scanning.\n")
             elif response.status == 404:
                 var2 = var2
             elif response.status == 302:
@@ -286,7 +287,7 @@ try:
         print("\n\nCompleted \n")
         print var1, " Admin Page Found !"
         print var2, " Total Page Scanned !"
-        raw_input("The Game Over; Press Enter to Exit")
+        #raw_input("The Game Over; Press Enter to Exit")
 
     if code==6:
         print("\t [+] Scanning " + site + "...\n\n")
@@ -302,7 +303,7 @@ try:
             if response.status == 200:
                 var1 = var1 + 1
                 print "%s %s" % ( "\n\n>>>" + host, "Admin page found!")
-                raw_input("Press enter to continue scanning.\n")
+                #raw_input("Press enter to continue scanning.\n")
             elif response.status == 404:
                 var2 = var2
             elif response.status == 302:
@@ -313,7 +314,7 @@ try:
         print("\n\nCompleted \n")
         print var1, " Admin Page Found !"
         print var2, " Total Page Scanned !"
-        raw_input("The Game Over; Press Enter to Exit")
+        #raw_input("The Game Over; Press Enter to Exit")
 except (httplib.HTTPResponse, socket.error):
     print "\n\t[!] Session Cancelled; Error Occured. Check Internet Settings."
 except (KeyboardInterrupt, SystemExit):
