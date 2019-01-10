@@ -135,6 +135,7 @@ try:
     try:
         #site = raw_input("Write Target WebSite For Scan: ")
 	site = sys.argv[1]
+	print(sys.argv[1])
         site = site.replace("http://","")
         print ("\tChecking website " + site + "...")
         conn = httplib.HTTPConnection(site)
